@@ -18,6 +18,22 @@ Route::get('/', function () {
 });
 
 
+
+Route::get('/home', function () {
+
+	$cars = App\Car::orderBy('id', 'desc')->paginate(5);
+
+    return view('home', [
+        'cars' => $cars
+    ]);
+});
+
+
+
+
+
+
+
 Route::get('/admin/register', 'AdminController@index');
 Route::post('/admin/register', 'AdminController@store');
 

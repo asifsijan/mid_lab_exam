@@ -16,7 +16,7 @@
 		
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" href="#"><h4>Home</h4></a>
+				<a class="nav-link" href="/admin/home"><h4>Home</h4></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="/admin/car"><h4>Add Car</h4></a>

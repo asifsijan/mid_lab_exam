@@ -4,7 +4,7 @@
 	@include('layouts.head')
 </head>
 <body>
-	@include('layouts.admin_header')
+	@include('layouts.header')
 
 		<div class="container">
 		@foreach ($cars as $car)

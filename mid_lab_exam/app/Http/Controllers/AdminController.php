@@ -89,15 +89,29 @@ class AdminController extends Controller
 
 
 
+
 	public function home(Request $req){
 		if($req->session()->has('name')){
-			return view('admin.home');;
+			$cars = \App\Car::all();
+			
+			return view('admin.home', ['cars' => $cars]);
 		}else{
 			$req->session()->flash('msg', 'invalid request...login first!');
 			return redirect('/admin/login');
 		}
 		
 	}
+
+
+
+
+
+
+
+
+
+
+
 	public function logout(Request $req){
 
 		$req->session()->flush();
