@@ -16,3 +16,36 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/admin/register', 'AdminController@index');
+Route::post('/admin/register', 'AdminController@store');
+
+
+Route::get('/admin/login', 'AdminController@login');
+Route::post('/admin/login', 'AdminController@verify');
+Route::get('/admin/home', 'AdminController@home');
+Route::get('/admin/logout', 'AdminController@logout');
+
+
+Route::get('/admin/car', 'AdminController@addCar');
+Route::post('/admin/car', 'AdminController@storeCar');
+
+
+
+
+
+
+
+
+
+
+Route::get('/member/register', 'MemberController@index');
+Route::post('/member/register', 'MemberController@store');
+
+
+Route::get('/member/login', 'MemberController@login');
+Route::post('/member/login', 'MemberController@verify');
+Route::get('/member/home', 'MemberController@home');
+Route::get('/member/logout', 'MemberController@logout');
+

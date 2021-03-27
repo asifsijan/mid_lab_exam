@@ -17,8 +17,9 @@ class CreateCarsTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('category')
+            $table->string('category');
             $table->integer('price');
+            $table->string('image');
             $table->timestamps();
             
         });
@@ -34,3 +35,5 @@ class CreateCarsTable extends Migration
         Schema::dropIfExists('cars');
     }
 }
+
+
